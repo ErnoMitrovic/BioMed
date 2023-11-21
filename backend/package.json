@@ -1,0 +1,11 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "The backend part of the project",
+  "main": "index.js",
+  "scripts": {
+    "test": "node indext.test.js"
+  },
+  "author": "ErnoMitrovic",
+  "license": "ISC"
+}
