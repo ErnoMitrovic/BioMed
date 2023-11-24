@@ -11,6 +11,7 @@ function Header() {
                 color="white"
                 alignItems="center"
                 p={4}
+                w='100%'
             >
                 {/* Logo */}
                 <Box display="flex" alignItems="center" justifyContent="start">
