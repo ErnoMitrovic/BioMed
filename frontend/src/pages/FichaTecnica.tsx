@@ -178,7 +178,7 @@ function FichaTecnica() {
     };
 
     return (
-        <Box bg="#D9C7D3" w='100%' as='form' onSubmit={submit}>
+        <Box w='100%' as='form' onSubmit={submit}>
             <Flex direction='column' align="center" justify="center" minW='sm'>
                 <Grid templateColumns={templateValues} gap={4} autoRows="minmax(75px, auto)" p={4} w='80%'>
                     {formFields.slice(0, 6).map((field) => (
