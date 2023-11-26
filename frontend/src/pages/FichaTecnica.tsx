@@ -12,6 +12,11 @@ import {
     Grid,
     GridItem,
     Radio,
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
 } from '@chakra-ui/react';
 
 import { CUIAutoComplete } from 'chakra-ui-autocomplete';
@@ -71,7 +76,7 @@ const formFields: FormField[] = [
     { id: 'capacitacion', label: 'Capacitación', placeholder: 'Quien brinda la capacitacion', required: true, type: 'text' },
     { id: 'consumibles', label: 'Consumibles', placeholder: 'Consumibles del equipo', required: true, type: 'text' },
     { id: 'garantia', label: 'Garantia', placeholder: 'Garantia del equipo', required: true, type: 'text' },
-    { id: 'mantenimiento', label: 'Mantenimiento', placeholder: 'Periodo de mantenimiento', required: true, type: 'text' },
+    { id: 'mantenimiento', label: 'Mantenimiento', placeholder: 'Periodo de mantenimiento en meses', required: true, type: 'number' },
     { id: 'instalacion', label: 'Instalacion y puesta en marcha', placeholder: 'Instrucciones', required: true, type: 'text' },
     { id: 'normas', label: 'Normas y certificados vigentes', placeholder: 'Certificado / norma', required: true, type: 'text' },
 ];
@@ -156,6 +161,19 @@ function FichaTecnica() {
                         <Input type="date" onChange={(e) => handleChange(field.id, e.target.value)} />
                     </FormControl>
                 );
+            case 'number':
+                return (
+                    <FormControl>
+                        <FormLabel color='#8C587A' fontWeight='bold'>{field.label}</FormLabel>
+                        <NumberInput defaultValue={0} min={0}>
+                            <NumberInputField />
+                            <NumberInputStepper>
+                                <NumberIncrementStepper />
+                                <NumberDecrementStepper />
+                            </NumberInputStepper>
+                        </NumberInput>
+                    </FormControl>
+                )
             case 'radio':
                 return (
                     <FormControl as='fieldset'>
