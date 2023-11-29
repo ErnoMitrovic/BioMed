@@ -5,4 +5,6 @@ module.exports = function ({ BorrowController }) {
 
     router.get('/get', BorrowController.getBorrows)
     router.get('/get/:pattern', BorrowController.getBorrowsByPattern)
+
+    return router;
 }
