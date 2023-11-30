@@ -9,9 +9,7 @@ class EquipmentRepository extends BaseRepository{
     }
 
     async getEquipments(){
-        return await equipment.findAll({
-            limit: 10
-        });
+        return await equipment.findAll();
     }
 
     async getEquipmentsByPattern(pattern){

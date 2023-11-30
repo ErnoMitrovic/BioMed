@@ -14,8 +14,8 @@ function Header() {
                 w='100%'
             >
                 {/* Logo */}
-                <Box display="flex" alignItems="center" justifyContent="start">
-                    <Image src="/favicon.ico" boxSize="50px" alt="Logo" borderRadius='full' />
+                <Box display="flex" alignItems="center" justifyContent="center">
+                    <Image src="/SecretariaSalud.jpg" boxSize="75px" alt="Logo" />
                 </Box>
                 {/* Título */}
                 <Box>
@@ -23,31 +23,15 @@ function Header() {
                         pb={2}
                         fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }} // Tamaños de fuente diferentes para cada breakpoint
                     >
-                        Ficha Técnica de Equipo médico
+                        DIRECCION DE INVESTIGACION <br/>
+                        DEPARTAMENTO DE EVALUACION TECNOLOGICA <br/>
+                        CERTIFICADO DE ACEPTACION
                     </Heading>
                     <Divider borderWidth={2} borderRadius={10} />
                 </Box>
-                {/* Íconos de acciones */}
-                <Box display="flex" justifyContent="end">
-                    <IconButton
-                        aria-label="Inicio"
-                        icon={<FiHome />}
-                        size="lg"
-                        variant="ghost"
-                        color="white"
-                        marginRight={2}
-                        bg='#A61B8F'
-                        borderRadius='full'
-                    />
-                    <IconButton
-                        aria-label="Menú"
-                        icon={<FiMenu />}
-                        size="lg"
-                        variant="ghost"
-                        color="white"
-                        bg='#A61B8F'
-                        borderRadius='full'
-                    />
+                {/* Logo */}
+                <Box display="flex" alignItems="center" justifyContent="center">
+                    <Image src="/favicon.ico" boxSize="75px" alt="Logo" />
                 </Box>
             </Grid>
         </>

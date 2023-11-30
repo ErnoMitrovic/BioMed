@@ -25,7 +25,7 @@ const Equipment = sequelize.define('Equipment', {
         type: DataTypes.TEXT,
         allowNull: false,
     },
-    square_parts: {
+    spare_parts: {
         type: DataTypes.TEXT,
         allowNull: false,
     },
@@ -33,7 +33,7 @@ const Equipment = sequelize.define('Equipment', {
         type: DataTypes.TEXT,
         allowNull: false,
     },
-    waranty: {
+    warranty: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -45,7 +45,7 @@ const Equipment = sequelize.define('Equipment', {
         type: DataTypes.TEXT,
         allowNull: false,
     },
-    accesories: {
+    accessories: {
         type: DataTypes.TEXT,
         allowNull: false,
     },

@@ -2,16 +2,17 @@ import axios from "axios"
 import { BACK } from "./constants"
 
 export type Equipment = {
+    id?: string
     name: string
     brand: string
     maintenance: string
     consumables: string
-    square_parts: string
+    spare_parts: string
     installation: string
-    waranty: string
+    warranty: string
     training: string
     norms: string
-    accesories: string
+    accessories: string
 }
 
 const baseUrl = `${BACK}/equipment`
@@ -41,7 +42,7 @@ export const createEquipment = async (equipment: Equipment) => {
 }
 
 export const updateEquipment = async (equipment: Equipment) => {
-    const url = `${baseUrl}/update`
+    const url = `${baseUrl}/update/${equipment.id}`
     const response = await axios.put<Equipment>(url, equipment)
     return response.data
 }
