@@ -1,3 +1,4 @@
+const { Op } = require('sequelize');
 const BaseRepository = require('./base.repository');
 let equipment = null;
 
@@ -8,7 +9,9 @@ class EquipmentRepository extends BaseRepository{
     }
 
     async getEquipments(){
-        return await equipment.findAll();
+        return await equipment.findAll({
+            limit: 10
+        });
     }
 
     async getEquipmentsByPattern(pattern){
@@ -17,7 +20,8 @@ class EquipmentRepository extends BaseRepository{
                 name: {
                     [Op.like]: `%${pattern}%`
                 }
-            }
+            },
+            limit: 10
         });
     }
 
@@ -40,23 +44,15 @@ class EquipmentRepository extends BaseRepository{
     }
 
     async createEquipment(equipment){
-        return await equipment.create(equipment);
+        return await super.create(equipment);
     }
 
     async updateEquipment(id, equipment){
-        return await equipment.update(equipment, {
-            where: {
-                id
-            }
-        });
+        return await super.update(id, equipment);
     }
 
     async deleteEquipment(id){
-        return await equipment.destroy({
-            where: {
-                id
-            }
-        });
+        return await super.delete(id);
     }
 }
 

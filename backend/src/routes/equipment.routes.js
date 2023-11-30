@@ -10,7 +10,7 @@ module.exports = function ({ EquipmentController }) {
     router.delete('/delete/:id', EquipmentController.deleteEquipment)
     router.get('/count', EquipmentController.countEquipments)
     router.get('/count/:pattern', EquipmentController.countEquipmentsByPattern)
-    router.get('/get/:id', EquipmentController.getEquipment)
+    router.get('/getOne/:id', EquipmentController.getEquipment)
 
     return router;
 }

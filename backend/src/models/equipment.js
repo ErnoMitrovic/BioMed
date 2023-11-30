@@ -3,8 +3,10 @@ const sequelize = require('../database');
 
 const Equipment = sequelize.define('Equipment', {
     id: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         primaryKey: true,
+        allowNull: false,
+        defaultValue: DataTypes.UUIDV4,
     },
     name: {
         type: DataTypes.STRING,
@@ -16,19 +18,19 @@ const Equipment = sequelize.define('Equipment', {
         allowNull: false,
     },
     maintenance: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     consumables: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     square_parts: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     installation: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     waranty: {
@@ -36,26 +38,18 @@ const Equipment = sequelize.define('Equipment', {
         allowNull: false,
     },
     training: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     norms: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     accesories: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
-    manual: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    description: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    // Otros campos según sea necesario
+    // Other fields
 });
 
 module.exports = Equipment;

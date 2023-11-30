@@ -11,8 +11,21 @@ class BorrowService extends BaseService {
         return await borrowRepository.getBorrows();
     }
 
-    async getBorrowsByPattern(pattern) {
-        return await borrowRepository.getBorrowsByPattern(pattern);
+
+    async getBorrow(id) {
+        return await borrowRepository.getBorrow(id);
+    }
+
+    async createBorrow(borrow) {
+        return await borrowRepository.createBorrow(borrow);
+    }
+
+    async updateBorrow(id, borrow) {
+        return await borrowRepository.updateBorrow(id, borrow);
+    }
+
+    async deleteBorrow(id) {
+        return await borrowRepository.deleteBorrow(id);
     }
 }
 
